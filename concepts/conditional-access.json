@@ -1,0 +1,17 @@
+
+{
+  "id": "conditional-access",
+  "name": "Conditional Access",
+  "domain": "architecture",
+  "plain_english": "A Microsoft Entra ID feature that decides whether to allow, deny, or challenge a sign-in based on signals like who the user is, where they are, and what device they're using.",
+  "african_examples": [
+    "Like a bank's fraud detection: you swipe your card, the bank checks your location, device, and time. If something looks off (3 AM in a new country), it asks for an OTP.",
+    "Like a club bouncer who knows the regulars: if you walk in alone on a normal night, you go straight in. If you show up with 5 strangers at 2 AM, he checks everyone's ID."
+  ],
+  "common_wrong_answer": "Conditional Access always blocks suspicious sign-ins.",
+  "correction": "It can allow, deny, OR challenge (usually with MFA) - most often it challenges.",
+  "follow_ups": [
+    "Want to see how Conditional Access puts Zero Trust into practice?",
+    "Compare Conditional Access to RBAC?"
+  ]
+}
