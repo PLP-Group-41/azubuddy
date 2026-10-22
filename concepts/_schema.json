@@ -1,0 +1,17 @@
+
+{
+  "id": "region-pairs",
+  "name": "Region Pairs",
+  "domain": "architecture",
+  "plain_english": "Two Azure regions paired for disaster recovery, in the same geography, at least 300 miles apart.",
+  "african_examples": [
+    "Nairobi and Mombasa are paired - if Nairobi floods, Mombasa keeps running.",
+    "Same-country pairing means compliance stays inside one jurisdiction (Kenya)."
+  ],
+  "common_wrong_answer": "Regions in a pair are restored simultaneously during an outage.",
+  "correction": "One region in the pair is prioritized for restoration; the other follows.",
+  "follow_ups": [
+    "Want me to explain Brazil South - the famous exception?",
+    "Compare region pairs to availability zones?"
+  ]
+}
