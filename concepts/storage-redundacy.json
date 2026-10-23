@@ -1,0 +1,17 @@
+{
+  "id": "storage-redundancy",
+  "name": "Storage Redundancy (LRS/ZRS/GRS/GZRS)",
+  "domain": "architecture",
+  "plain_english": "Azure Storage keeps multiple copies of your data to protect against failures. LRS 3 copies in 1 datacenter. ZRS 3 copies, one in each of 3 zones.",
+  "african_examples": [
+    "LRS 3 copies on the same shelf in one M-Pesa shop.",
+    "ZRS 3 copies, one in each of 3 M-Pesa shops across town.",
+    "GRS copies in Nairobi AND a backup in Dar es Salaam. GZRS 3 shops in Nairobi 1 in Dar."
+  ],
+  "common_wrong_answer": "GRS lets me read from the secondary region any time.",
+  "correction": "Not by default you need RA-GRS for read access to the secondary before failover.",
+  "follow_ups": [
+    "Compare GRS vs GZRS for a hospital records system?",
+    "What are the durability 'nines' for each option?"
+  ]
+}

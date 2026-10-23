@@ -1,0 +1,16 @@
+{
+  "id": "availability-zones",
+  "name": "Availability Zones vs Sets",
+  "domain": "architecture",
+  "plain_english": "Availability Zones are separate datacenters within an Azure region, each with independent power, cooling, and networking. Availability Sets are separate virtual machine racks within a single datacenter.",
+  "african_examples": [
+    "Availability Zones are like 3 separate buildings in Nairobi's Industrial Area, each with its own backup generator. If one catches fire, the other two keep running.",
+    "Availability Sets are like putting your servers on different racks within the SAME building. When maintenance happens, only some go down."
+  ],
+  "common_wrong_answer": "Availability sets cost extra on top of VM pricing.",
+  "correction": "Availability sets are free you only pay for the VMs. Zones are preferred for new workloads where supported.",
+  "follow_ups": [
+    "Why are zones preferred over sets for new workloads?",
+    "What is a fault domain vs an update domain?"
+  ]
+}
