@@ -1,0 +1,23 @@
+<div id="concept-list" class="concept-list">
+  <ul>
+    <li><a href="#" data-concept-id="region-pairs" data-question="What is a region pair?">Region Pairs</a></li>
+    <li><a href="#" data-concept-id="availability-zones" data-question="What are availability zones?">Availability Zones</a></li>
+    <li><a href="#" data-concept-id="storage-redundancy" data-question="What is storage redundancy?">Storage Redundancy</a></li>
+    <li><a href="#" data-concept-id="conditional-access" data-question="What is Conditional Access?">Conditional Access</a></li>
+    <li><a href="#" data-concept-id="capex-vs-opex" data-question="What is CapEx vs OpEx?">CapEx vs OpEx</a></li>
+  </ul>
+</div>
+
+<script>
+  document.querySelectorAll('#concept-list a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const input = document.getElementById('question-input');
+      if (input) {
+        input.value = a.dataset.question;
+        input.dataset.conceptId = a.dataset.conceptId;
+        input.focus();
+      }
+    });
+  });
+</script>
