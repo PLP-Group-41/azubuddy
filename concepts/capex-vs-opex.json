@@ -1,0 +1,17 @@
+{
+  "id": "capex-vs-opex",
+  "name": "CapEx vs OpEx",
+  "domain": "management",
+  "plain_english": "Capital Expenditure (CapEx) is money spent upfront to buy or build long-term assets, while Operational Expenditure (OpEx) is money spent on ongoing services and running costs. In cloud computing, buying physical servers is typically CapEx, while paying for Azure services as you use them is typically OpEx.",
+  "african_examples": [
+    "A Kenyan university buying physical servers for its computer labs spends money upfront (CapEx). If it instead hosts its student portal on Azure and pays for the resources it consumes, those ongoing charges are typically OpEx.",
+    "A Nairobi-based startup buying and maintaining its own servers invests in CapEx. Using cloud services and paying monthly according to consumption shifts much of the spending toward OpEx."
+  ],
+  "common_wrong_answer": "Moving to the cloud means every IT cost disappears and all spending becomes OpEx.",
+  "correction": "Cloud computing can reduce upfront infrastructure investment and shift many costs to ongoing operational spending, but organisations may still have upfront costs, subscriptions, licensing fees, and other capital expenses.",
+  "follow_ups": [
+    "How does pay-as-you-go pricing affect cloud costs?",
+    "What are the advantages and disadvantages of CapEx versus OpEx?",
+    "How can an organisation estimate its total cloud cost?"
+  ]
+}
