@@ -1,0 +1,67 @@
+{
+  "id": "region-pairs",
+  "name": "Region Pairs",
+  "domain": "architecture",
+  "plain_english": "Two Azure regions paired for disaster recovery, same geography, at least 300 miles apart.",
+  "african_examples": [
+    "Nairobi and Mombasa are paired if Nairobi floods, Mombasa keeps running.",
+    "Same-country pairing means compliance stays inside one jurisdiction (Kenya)."
+  ],
+  "common_wrong_answer": "Regions in a pair are restored simultaneously during an outage.",
+  "correction": "One region in the pair is prioritized for restoration; the other follows.",
+  "follow_ups": [
+    "Want me to explain Brazil South the famous exception?",
+    "Compare region pairs to availability zones?"
+  ]
+}
+```[cite: 16]
+
+### 2. `concepts/availability-zones.json`[cite: 16]
+```json
+{
+  "id": "availability-zones",
+  "name": "Availability Zones vs Sets",
+  "domain": "architecture",
+  "plain_english": "Availability Zones are separate datacenters within an Azure region, each with independent power, cooling, and networking. Availability Sets are separate virtual machine racks within a single datacenter.",
+  "african_examples": [
+    "Availability Zones are like 3 separate buildings in Nairobi's Industrial Area, each with its own backup generator. If one catches fire, the other two keep running.",
+    "Availability Sets are like putting your servers on different racks within the SAME building. When maintenance happens, only some go down."
+  ],
+  "common_wrong_answer": "Availability sets cost extra on top of VM pricing.",
+  "correction": "Availability sets are free you only pay for the VMs. Zones are preferred for new workloads where supported.",
+  "follow_ups": [
+    "Why are zones preferred over sets for new workloads?",
+    "What is a fault domain vs an update domain?"
+  ]
+}
+```[cite: 16, 17]
+
+### 3. `concepts/storage-redundancy.json`[cite: 17]
+```json
+{
+  "id": "storage-redundancy",
+  "name": "Storage Redundancy (LRS/ZRS/GRS/GZRS)",
+  "domain": "architecture",
+  "plain_english": "Azure Storage keeps multiple copies of your data to protect against failures. LRS 3 copies in 1 datacenter. ZRS 3 copies, one in each of 3 zones.",
+  "african_examples": [
+    "LRS 3 copies on the same shelf in one M-Pesa shop.",
+    "ZRS 3 copies, one in each of 3 M-Pesa shops across town.",
+    "GRS copies in Nairobi AND a backup in Dar es Salaam. GZRS 3 shops in Nairobi 1 in Dar."
+  ],
+  "common_wrong_answer": "GRS lets me read from the secondary region any time.",
+  "correction": "Not by default you need RA-GRS for read access to the secondary before failover.",
+  "follow_ups": [
+    "Compare GRS vs GZRS for a hospital records system?",
+    "What are the durability 'nines' for each option?"
+  ]
+}
+```[cite: 17]
+
+---
+
+### How to add them in VS Code:
+1. Create a folder named `concepts` in your root directory if it isn't there already.
+2. Create each of the three JSON files above inside `concepts/`.
+3. Run your tests locally to verify they pass:
+   ```bash
+   npm test
