@@ -1,5 +1,4 @@
 <div id="concept-list" class="concept-list">
-  <h3>Concepts</h3>
   <ul>
     <li><a href="#" data-concept-id="region-pairs" data-question="What is a region pair?">Region Pairs</a></li>
     <li><a href="#" data-concept-id="availability-zones" data-question="What are availability zones?">Availability Zones</a></li>
@@ -13,14 +12,10 @@
   document.querySelectorAll('#concept-list a').forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
-
-      const question = a.dataset.question;
-      const conceptId = a.dataset.conceptId;
       const input = document.getElementById('question-input');
-
       if (input) {
-        input.value = question;
-        input.dataset.conceptId = conceptId;
+        input.value = a.dataset.question;
+        input.dataset.conceptId = a.dataset.conceptId;
         input.focus();
       }
     });
